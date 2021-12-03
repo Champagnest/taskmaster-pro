@@ -46,8 +46,6 @@ var saveTasks = function() {
 };
 
 
-
-
 // modal was triggered
 $("#task-form-modal").on("show.bs.modal", function() {
   // clear values
@@ -90,7 +88,9 @@ $(".list-group").on("click", "p", function() {
     .trim();
 
   // replace p element with a new textarea
-  var textInput = $("<textarea>").addClass("form-control").val(text);
+  var textInput = $("<textarea>")
+  .addClass("form-control")
+  .val(text);
   $(this).replaceWith(textInput);
 
   // auto focus new element
